@@ -24,9 +24,11 @@ useEffect(()=>{
             <div className="card-body">
               <div className="d-flex ">
                 <div className="flex-shrink-0">
-                  <img src={element.image} className="img-fluid  "
-                    style={{ width: "100px", height: "100px" }} alt={element.title} />
-                </div>
+                  {element.images.map((img)=>{
+                     <img src={img} className="img-fluid  "
+                     style={{ width: "100px", height: "100px" }} alt={element.title} />
+                  })}
+                 </div>
                 <div className="flex-grow-1 mx-3">
                   <h5>{element.title}</h5>
                   <p className="text-muted mb-2">{element.description}</p>

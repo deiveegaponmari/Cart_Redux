@@ -7,19 +7,19 @@ const CartSlice=createSlice({
     },
     reducers:{
         saveProduct:(state,action)=>{
-            console.log(state,action)
+           // console.log(state,action)
            return {
             ...state,
             product:action.payload
            }
         },
          handlechange:(state,action)=>{
-           console.log(action);
+          // console.log(action);
            const{quantity,id}=action.payload;
 
          //Find the matching product
         const matchingProduct =state.product.find((item) => item.id === id);
-        console.log(matchingProduct)
+      //  console.log(matchingProduct)
         if(!matchingProduct){
             console.log("Product Not Found");
             return state;
