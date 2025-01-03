@@ -24,7 +24,7 @@ useEffect(()=>{
             <div className="card-body">
               <div className="d-flex ">
               <div className="flex-shrink-0">
-              <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+              <div id={'carousal-${index}'} className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
                {element.images.map((img,imgIndex)=>{
                     return  <div key={`${element.title}-img-${imgIndex}`}
@@ -55,7 +55,7 @@ useEffect(()=>{
                 <div className="btn-group">
                     <button type="button" className="btn btn-danger dropdown-toggle" 
                     data-bs-toggle="dropdown" aria-expanded="false" >
-                      1
+                      {cartReducer.totals[element.id] ?.quantity || 1}
                     </button>
                     <ul className="dropdown-menu">
                       <li><button className="dropdown-item"

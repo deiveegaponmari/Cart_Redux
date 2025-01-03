@@ -3,7 +3,8 @@ const CartSlice=createSlice({
     name:"Product",
     initialState:{
         product:[],
-        totals:{}
+        totals:{},
+        quantity:1
     },
     reducers:{
         saveProduct:(state,action)=>{
@@ -16,6 +17,7 @@ const CartSlice=createSlice({
          handlechange:(state,action)=>{
           // console.log(action);
            const{quantity,id}=action.payload;
+
 
          //Find the matching product
         const matchingProduct =state.product.find((item) => item.id === id);
@@ -36,8 +38,8 @@ const CartSlice=createSlice({
 
         //update result individual id product
        
-        state.totals[id]={subTotal,Total}
-      
+        state.totals[id]={subTotal,Total,quantity}
+     
         }, 
         handleRemove:(state,action)=>{
            // console.log(state,action)
