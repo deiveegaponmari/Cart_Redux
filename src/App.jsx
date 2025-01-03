@@ -23,12 +23,29 @@ useEffect(()=>{
             return <div className='card m-2' key={`${element.title}-${index}`} style={{ width: "30rem", height: "30rem" }}>
             <div className="card-body">
               <div className="d-flex ">
-                <div className="flex-shrink-0">
-                  {element.images.map((img)=>{
-                     <img src={img} className="img-fluid  "
+              <div className="flex-shrink-0">
+              <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+               {element.images.map((img,imgIndex)=>{
+                    return  <div key={`${element.title}-img-${imgIndex}`}
+                    className={`carousel-item ${imgIndex === 0 ? "active" : ""}`}>
+                    <img src={img} className="img-fluid  "
                      style={{ width: "100px", height: "100px" }} alt={element.title} />
+                     </div>
+                    
                   })}
-                 </div>
+                   </div>
+                   <button className="carousel-control-prev" type="button" data-bs-target={`#carousel-${index}`} data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target={`#carousel-${index}`} data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                     </div>
+                     </div>
+                
                 <div className="flex-grow-1 mx-3">
                   <h5>{element.title}</h5>
                   <p className="text-muted mb-2">{element.description}</p>

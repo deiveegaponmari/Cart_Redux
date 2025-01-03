@@ -34,10 +34,10 @@
             "shipping":"FREE",
             "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
             "images": [
-                "https://i.dummyjson.com/data/products/2/1.jpg",
-                "https://i.dummyjson.com/data/products/2/2.jpg",
-                "https://i.dummyjson.com/data/products/2/3.jpg",
-                "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+                "https://img.freepik.com/free-vector/front-view-iphone-16-pro-max-desert-titanium-mockup-with-siri-frame-black-screen-isolated-black_90220-3056.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/free-vector/smartphone-with-gradient-wallpaper_23-2147842890.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/premium-psd/black-iphone-with-black-background-black-background_382352-29554.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/premium-photo/shot-smartphone_931878-585851.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid"
             ]
         },
         {
@@ -53,7 +53,8 @@
             "shipping":45,
             "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
             "images": [
-                "https://i.dummyjson.com/data/products/3/1.jpg"
+                "https://img.freepik.com/premium-vector/realistic-smartphone-vector-illustration_92926-134.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/free-photo/black-friday-sale-banner-template-mobile-mockup_460848-6322.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid"
             ]
         },
         {
@@ -69,11 +70,9 @@
             "shipping":"FREE",
             "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
             "images": [
-                "https://i.dummyjson.com/data/products/4/1.jpg",
-                "https://i.dummyjson.com/data/products/4/2.jpg",
-                "https://i.dummyjson.com/data/products/4/3.jpg",
-                "https://i.dummyjson.com/data/products/4/4.jpg",
-                "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+                "https://img.freepik.com/free-photo/white-cell-phone-box-background_58702-4765.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/free-vector/triple-camera-black-smartphone-concept-mockup_1017-19784.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/premium-vector/smartphone-back-front_66219-1913.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid"
             ]
         },
         {
@@ -89,9 +88,9 @@
             "shipping":50,
             "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
             "images": [
-                "https://i.dummyjson.com/data/products/5/1.jpg",
-                "https://i.dummyjson.com/data/products/5/2.jpg",
-                "https://i.dummyjson.com/data/products/5/3.jpg"
+                "https://img.freepik.com/free-photo/new-cell-phone-white-background_58702-4804.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/premium-psd/smartphone-skin-mock-up-isolated_1310-1596.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid",
+                "https://img.freepik.com/premium-vector/smartphone-mockup_66219-1974.jpg?ga=GA1.1.688042556.1704957884&semt=ais_hybrid"
             ]
         }
     ]
