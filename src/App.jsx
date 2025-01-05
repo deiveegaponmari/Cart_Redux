@@ -1,10 +1,10 @@
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { saveProduct } from './Redux/Reducers/CartSlice';
 import { handlechange, handleRemove } from "./Redux/Reducers/CartSlice";
 function App() {
-
+const [activeIndex,setActiveIndex]=useState({});
   const dispatcher = useDispatch();
   const { cartReducer } = useSelector(state => state)
   //console.log(product)
@@ -110,22 +110,40 @@ function App() {
     dispatcher(saveProduct(productData.products))
 
   }, [])
+  function handlePrevButton(index,imgLength){
+    setActiveIndex((prev)=>{
+      const newIndex=prev[index] > 0 ? prev[index] -1 : imgLength -1;
+      return{
+        ...prev ,[index]:newIndex
+      }
+    })
+  }
+  function handleNextButton(index,imgLength){
+    setActiveIndex((prev)=>{
+      const newItem=prev[index] < imgLength -1 ? prev[index] + 1 :0;
+      return {
+        ...prev,[index]:newItem
+      }
+    })
+  }
 
   return (
     <div className='container'>
       {
         cartReducer.product.map((element, index) => {
+          const imagesLength=element.images.length;
+          const currentActiveIndex=activeIndex[index] || 0;
           return <div className='card m-2' key={`${element.title}-${index}`}
             style={{ width: "30rem", height: "30rem" }}>
             <div className="card-body">
               <div className="d-flex ">
                 <div className="flex-shrink-0">
-                  <div id={'carousal-${index}'} className="carousel slide"
+                  <div id={`carousal-${index}`} className="carousel slide"
                     data-bs-ride="carousel">
                     <div className="carousel-inner">
                       {element.images.map((img, imgIndex) => {
                         return <div key={`${element.title}-img-${imgIndex}`}
-                          className={`carousel-item ${imgIndex === 0 ? "active" : ""}`}>
+                          className={`carousel-item ${imgIndex === currentActiveIndex ? "active" : ""}`}>
                           <img src={img} className="img-fluid  "
                             style={{ width: "100px", height: "100px" }}
                             alt={element.title} />
@@ -133,18 +151,21 @@ function App() {
 
                       })}
                     </div>
-                   {/*  <button className="carousel-control-prev" type="button"
+                    <button className="carousel-control-prev" type="button"
+                    onClick={()=>handlePrevButton(index,imagesLength)}
                       data-bs-target={`#carousel-${index}`} data-bs-slide="prev">
                       <span className="carousel-control-prev-icon"
                         aria-hidden="true"></span>
                       <span className="visually-hidden">Previous</span>
                     </button>
-                    <button className="carousel-control-next" type="button"
+                    <button className="carousel-control-next"  
+                    onClick={()=>handleNextButton(index,imagesLength)} 
+                      type="button"
                       data-bs-target={`#carousel-${index}`} data-bs-slide="next">
                       <span className="carousel-control-next-icon"
                         aria-hidden="true"></span>
                       <span className="visually-hidden">Next</span>
-                    </button> */}
+                    </button> 
                   </div>
                 </div>
 
